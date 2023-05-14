@@ -6,13 +6,13 @@ body {
 .main {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto 4fr;
     grid-template-rows: 1fr 4fr;
 }
 
 .left {
     height: auto;
-    width: 220px;
+    width: max(220px, 15vw);
     padding-inline: 20px;
     padding-top: 0px;
     background-color: rgb(37, 154, 223);
@@ -21,7 +21,7 @@ body {
     display: grid; 
     gap: 8px;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 2fr repeat(9, 1fr) 8fr;
+    grid-template-rows: 3fr repeat(9, 1fr) 8fr;
     align-items: center;
     justify-items: start;
 }
@@ -30,8 +30,8 @@ body {
     justify-self: center;
 }
 
-.left :nth-child(13)
-,.left :nth-child(14) {
+.left :nth-child(13),
+.left :nth-child(14) {
     margin-bottom: 40px;
     margin-top: 8px;
 }
@@ -66,6 +66,8 @@ body {
 }
 .header {
     display: grid;
+    padding-inline: 40px;
+    padding-bottom: 10px;;
     grid-template-rows: 1fr 1fr;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
 }
@@ -73,15 +75,99 @@ body {
 .hTop {
     grid-row-start: 1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
+
+.tLeft {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.hTop img {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+
+.tRight img:nth-child(2) {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.hTop input {
+    flex-grow: 1;
+    border-radius: 25px;
+    border-style: none;
+    background-color:rgb(235, 233, 233);
+    height: 30px;
+}
+
+.tRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.hTop h4 {
+    font-size: 20px;
+    width: max-content;
+}
+
 
 .hBot {
     grid-row-start: 2;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
+}
+
+.hLeft {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hLeft img {
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.name *{
+    margin-inline: 0px;
+    margin-block: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.name h3 {
+    font-size: 22px;
+    width: max-content
+}
+
+.hRight {
+    display: flex;
+    gap: 30px;
+}
+
+.hRight button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color:rgb(37, 154, 223);
+    border-radius: 25px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .content {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
 * {
     box-sizing: border-box;
 }
@@ -45,18 +46,23 @@ body {
 
 .left h3 {
     margin: 0px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 .left img {
     width: 20px;
     height: 20px;
-    background-color: white;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(139deg) brightness(108%) contrast(101%);
 }
 .left :nth-child(1) {
     width: 35px;
     height: 35px;
 }
+
+.left :nth-child(7) {
+    transform: scaleX(-1);
+}
+
 .options * {
     margin: 0px;
     font-size: 18px;
@@ -94,9 +100,8 @@ body {
 }
 
 .hTop img {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+    width: 25px;
+    height: 25px;
 }
 
 .hTop input {
@@ -116,8 +121,8 @@ body {
 }
 
 .tRight img:nth-child(2) {
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 25px;
 }
 
@@ -220,7 +225,7 @@ body {
 
 .bord {
     background-color: rgb(255, 174, 0);
-    width: 10px;
+    width: 8px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 100%;
@@ -263,9 +268,8 @@ body {
 }
 
 .icons img {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+    width: 20px;
+    height: 20px;
 }
 .announcements {
     grid-area: 1 / 2 / 2 / 3;
@@ -290,9 +294,9 @@ body {
 .aBox div {
     height: 1px;
     width: 105%;
-    margin-block: 10px;
+    margin-block: 15px;
     align-self: center;
-    background-color:rgb(180, 180, 180);
+    background-color:rgb(197, 197, 197);
 }
 
 .aBox * {
@@ -301,7 +305,7 @@ body {
 
 .aBox h5 {
     font-size: 14px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
 }
 
 .aBox p {
@@ -338,7 +342,6 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: black;
 }
 
 .user {
